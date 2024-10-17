@@ -1,0 +1,38 @@
+.block-input-wrapper{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.block-input {
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+}
+.block-input-content {
+    outline: none;
+    width: 100%;
+    border: none;
+    padding: 4px 12px;
+    box-sizing: border-box;
+}
+.block-input-button {
+    cursor: pointer;
+    background-color: #FFC101;
+    border: none;
+    color: #fff;
+    font-weight: bolder;
+    padding: 0 13px;
+    box-sizing: border-box;
+}
+.block-menu {
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-top: 2px;
+    height: fit-content;
+    z-index: 1;
+}

@@ -1,0 +1,143 @@
+.container {
+    height: 228px;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(93, 95, 97, 0.14),0px 4px 8px 0px rgba(93, 95, 97, 0.14);
+    position: relative;
+    border-radius: 4px;
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.menu {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
+    position: relative;
+    border-right: 1px solid #E1E4E6;
+
+}
+.menu-line-top {
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 20px;
+    position: sticky;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+    /*background: rgb(0,0,0);*/
+    /*background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);*/
+}
+.menu-line-bottom {
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 20px;
+    position: sticky;
+    /*background: rgb(0,0,0);*/
+    /*background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);*/
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+
+}
+.menu::-webkit-scrollbar,
+.menu::-webkit-scrollbar-track {
+    background-color: unset;
+    width: 0;
+    height: 0;
+}
+.menu-content {
+    padding: 0 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+.menu-content-title {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 14px;
+    color: #7F878C;
+}
+.menu-content__item {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #2A3033;
+}
+.field {
+    flex: 2;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+.field-author {
+    padding: 16px 12px;
+    box-sizing: border-box;
+    display: flex;
+    column-gap: 4px;
+    align-items: center;
+    border: 1px solid rgb(225, 228, 230);
+    border-radius: 4px;
+    background: rgb(255, 255, 255);
+    position: relative;
+}
+.field-author-label {
+    position: absolute;
+    left: 11px;
+    top: -7px;
+    padding: 0px 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #8C9499;
+    background-color: #fff;
+}
+.field-author-input {
+    border:none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #9AA1A6;
+}
+.field-author-btn {
+    background-color: #EFF1F2;
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    cursor: pointer;
+    height: 24px;
+}
+.field-values {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+.value {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+}
+.value-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.value-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.item {
+    display: flex;
+    column-gap: 7px;
+    align-items: center;
+}
+.checkbox {
+    width: 18px;
+    height: 18px;
+}

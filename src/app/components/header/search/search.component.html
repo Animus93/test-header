@@ -1,0 +1,11 @@
+<div appClickOutside (clickOutside)="hideInput()" class="block-input-wrapper">
+    <div class="block-input">
+        <input (focus)="toggleMenu(true)" type="text" placeholder="Поисковой запрос" class="block-input-content">
+        <button class="block-input-button">Найти</button>
+    </div>
+    @if (headerService.menuBlock) {
+        <div class="block-menu">
+            <app-menu></app-menu>
+        </div>
+    }
+</div>

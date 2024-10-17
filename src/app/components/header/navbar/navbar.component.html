@@ -1,0 +1,8 @@
+<div class="block-navbar">
+    @for (item of navigation; track item) {
+        <button (click)="close.emit()" class="navbar__item">
+            <img class="item__item-icon" [src]="item.icon" [alt]="item.name">
+            <div class="item__item-title">{{ item.name }}</div>
+        </button>
+    }
+</div>

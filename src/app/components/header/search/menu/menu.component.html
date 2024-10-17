@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="content">
+        <div class="menu">
+            <div class="menu-line-top"></div>
+            <div class="menu-content">
+                <div class="menu-content-title">История</div>
+                @for (item of menuItems; track item) {
+                    <div class="menu-content__item">{{ item.name }}</div>
+                }
+            </div>
+            <div class="menu-line-bottom"></div>
+
+        </div>
+        <div class="field">
+            <div class="field-author">
+                <div class="field-author-label">Автор</div>
+                <input placeholder="Имя или должность" class="field-author-input">
+                <button class="field-author-btn">
+                    <img src="assets/images/icons/yandex-btn.svg">
+                </button>
+            </div>
+            <div class="field-values">
+                @for (value of values; track value){
+                <div class="value">
+                    <div class="value-title">{{value.name}}</div>
+                    <div class="value-items">
+                        @for (item of value.items;track item){
+                        <div class="item">
+                            <input class="checkbox" type="checkbox">
+                            <div>{{ item.name }}</div>
+                        </div>
+                        }
+                    </div>
+                </div>
+                }
+            </div>
+
+        </div>
+    </div>
+</div>

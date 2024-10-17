@@ -1,0 +1,81 @@
+@if (headerService.searchMobile()) {
+    <div class="mobile-content">
+        <div class="mobile-content__search">
+            <button (click)="headerService.searchMobile.set(false)" class="back">
+                <img src="assets/images/icons/arrow_back.svg">
+            </button>
+            <input class="mobile-search" placeholder="Поиск">
+        </div>
+        <div class="mobile-content__body">
+            <div class="field-author">
+                <div class="field-author-label">Автор</div>
+                <input placeholder="Имя или должность" class="field-author-input">
+                <button class="field-author-btn">
+                    <img src="assets/images/icons/yandex-btn.svg">
+                </button>
+            </div>
+            <div class="mobile-body__block">
+                <div class="block__item">
+                    <img class="item__icon" src="assets/images/icons/list-item.svg">
+                    <div class="item__name">Я участник</div>
+                </div>
+                <div class="block__item">
+                    <img class="item__icon" src="assets/images/icons/list-item.svg">
+                    <div class="item__name">В заголовках</div>
+                </div>
+                <div class="block__item">
+                    <img class="item__icon" src="assets/images/icons/list-item.svg">
+                    <div class="item__name">Строгий поиск</div>
+                </div>
+            </div>
+            <div class="mobile-body__block">
+                <div>Только</div>
+                <div class="block__item">
+                    <img class="item__icon" src="assets/images/icons/list-item.svg">
+                    <div class="item__name">Я участник</div>
+                </div>
+                <div class="block__item">
+                    <img class="item__icon" src="assets/images/icons/list-item.svg">
+                    <div class="item__name">В заголовках</div>
+                </div>
+                <div class="block__item">
+                    <img class="item__icon" src="assets/images/icons/list-item.svg">
+                    <div class="item__name">Строгий поиск</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+} @else {
+    <div class="content">
+        <div class="content__block">
+            <button (click)="showNavbarMobile($event)" class="mobile-nav"><img src="assets/images/icons/menu.svg"
+                                                                               alt="menu">
+            </button>
+            <img class="logo" src="assets/images/logo.svg" alt="tile.expert">
+            <div class="block">
+                <app-navbar class="navbar" [navigation]="navigation"></app-navbar>
+                <button (click)="showSearchInput()" class="header-control">
+                    <img src="assets/images/icons/search.svg" alt="Поиск">
+                </button>
+                <div [@openClose]="inputBlockAnimation? 'open':'closed'"
+                     (@openClose.done)="setInputBlockViewHandler($event)" class="block-input-wrapper">
+                    @if (inputBlockView) {
+                        <app-search></app-search>
+                    }
+                </div>
+            </div>
+            <button class="header-control">
+                <img src="assets/images/icons/add.svg" alt="Добавить">
+            </button>
+        </div>
+        <div class="content__block">
+            <app-notification [notificationCount]="32"></app-notification>
+            <button class="header-control">
+                <img src="assets/images/avatar.svg" alt="Фото">
+            </button>
+
+        </div>
+    </div>
+    <ng-template #mobileNav></ng-template>
+}
